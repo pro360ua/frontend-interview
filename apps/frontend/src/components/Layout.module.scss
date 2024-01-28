@@ -1,0 +1,20 @@
+.nav {
+  background-color: #eee;
+  padding: 1rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+
+    li {
+      display: block;
+    }
+  }
+}
+
+.routePage {
+  padding: 1rem;
+}

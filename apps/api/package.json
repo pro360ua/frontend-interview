@@ -1,0 +1,19 @@
+{
+  "name": "@apps/api",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "generate-users": "node ./scripts/generate-users.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.0"
+  }
+}

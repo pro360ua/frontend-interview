@@ -1,0 +1,26 @@
+{
+  "name": "edclub-interview",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "format:check": "prettier --check --cache .",
+    "format:fix": "prettier --write --cache .",
+    "start": "pnpm run --filter @apps/* start",
+    "watch": "pnpm run --filter @apps/* watch"
+  },
+  "workspaces": [
+    "apps/frontend",
+    "apps/api"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.11.9",
+    "husky": "^9.0.6",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
