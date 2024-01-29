@@ -1,13 +1,12 @@
 {
-  "name": "edclub-interview",
+  "name": "frontend-interview",
   "version": "0.1.0",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
     "format:check": "prettier --check --cache .",
     "format:fix": "prettier --write --cache .",
-    "start": "pnpm run --filter @apps/* start",
-    "watch": "pnpm run --filter @apps/* watch"
+    "start": "pnpm run --filter @apps/* watch"
   },
   "workspaces": [
     "apps/frontend",
