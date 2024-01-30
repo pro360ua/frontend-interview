@@ -1,4 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
+import { cn } from "@/utils";
 
 import styles from "./Layout.module.scss";
 
@@ -14,7 +15,14 @@ const Layout = () => {
         <ul>
           {links.map((link) => (
             <li key={link.to}>
-              <Link to={link.to}>{link.label}</Link>
+              <Link
+                to={link.to}
+                className={cn(
+                  "rounded border-2 border-stone-900 bg-stone-200 px-4 py-1 text-stone-900 hover:bg-stone-700 hover:text-stone-200"
+                )}
+              >
+                {link.label}
+              </Link>
             </li>
           ))}
         </ul>

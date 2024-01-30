@@ -6,7 +6,7 @@ const Users = () => {
   return (
     <div>
       <h1>Users</h1>
-      <p>Users will be listed here</p>
+      {/* Render the user list here */}
     </div>
   );
 };
