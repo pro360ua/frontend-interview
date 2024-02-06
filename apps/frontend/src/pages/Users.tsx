@@ -11,6 +11,7 @@ export type TUser = {
 const Users = () => {
   // fetch users from api
   const [users, setUsers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -22,9 +23,25 @@ const Users = () => {
     fetchUsers();
   }, []);
 
+  useEffect(() => {
+    const searchUsers = async () => {
+      const response = await fetch(`/api/users?query=${searchTerm}`);
+      const searchedUsers = await response.json();
+      setUsers(searchedUsers);
+    }
+
+    searchUsers();
+  }, [searchTerm]);
+
   return (
     <div>
       <h1 className="title">Users</h1>
+      <input
+        type="text"
+        className="search-bar" 
+        value={searchTerm} 
+        onChange={(e) => setSearchTerm(e.target.value)} 
+        placeholder="Search user" />
       {/* Render the user list here */}
       <ul className="users-container">
         {users.map((user: TUser) => {
