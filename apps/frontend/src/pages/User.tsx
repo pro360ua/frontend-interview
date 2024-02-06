@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { User as TUser } from "./Users";
+import './User.css';
 
 export const User = () => {
     const [userById, setUserById] = useState<TUser>({});

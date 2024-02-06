@@ -1,5 +1,6 @@
 // import React from "react";
 import { useEffect, useState } from "react";
+import './Users.css';
 
 export type TUser = {
   id: string;
