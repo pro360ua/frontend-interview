@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Layout } from "@/components";
-import { Home, Users } from "@/pages";
+import { Home, Users, User } from "@/pages";
 
 import "./index.css";
 
@@ -14,6 +14,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/users", element: <Users /> },
+      { path: "/user/:id", element: <User /> }
     ],
   },
 ]);
